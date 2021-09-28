@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  incicle-postgres-compose:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: "Incicle123"
+    ports:
+      - "5432:5432"
+    volumes:
+      - /Users/Users/UserOneDrive/Documentos/postgres/db:/var/lib/postgresql/data
