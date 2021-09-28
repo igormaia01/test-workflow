@@ -4,7 +4,7 @@ class UserController {
     async store() {
         return { result : 'isso foi um test' }
     }
-
+    //comment for test
     async show() {
         return { result : 'buscou o usuário 1' }
     }
