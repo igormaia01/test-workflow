@@ -12,5 +12,5 @@ jobs:
         uses: actions/setup-node@v1
       - name: Install dependencies
         run: npm install
-      - name: Run tests 
+      - name: adonis test
         run: adonis test
