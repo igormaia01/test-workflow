@@ -14,15 +14,12 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [ 14.x ]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
-    steps:
+  steps:
+    - name: Check out code
     - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v2
-
-    - run: npm ci
-    - run: adonis test
+    - name: Set up node 
+      uses: actions/setup-node@v1
+    - name: Install dependencies
+      run: npm install
+    - name: Run tests 
+      run: node ace test
